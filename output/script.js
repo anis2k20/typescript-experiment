@@ -1,5 +1,6 @@
 "use strict";
 console.log("Hello world!");
+// type----------------------------
 const country = "Bangladesh";
 console.log(country);
 let playerName = "Anis";
@@ -27,3 +28,24 @@ let person = {
     isMale: true,
 };
 person.name = "shakil";
+// explicit and union type
+let a;
+let b;
+a = "anis";
+b = 25;
+let names = [];
+names.push("anis", "shakil");
+let ages = [];
+ages.push(25, 30);
+let test;
+test = "abc";
+test = 25;
+// union
+let info = [];
+info.push("anis", 25);
+let data;
+data = {
+    name: "anis",
+    age: 25,
+};
+console.log(data);

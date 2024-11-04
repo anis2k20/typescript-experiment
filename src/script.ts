@@ -1,5 +1,5 @@
 console.log("Hello world!");
-
+// type----------------------------
 const country = "Bangladesh";
 
 console.log(country);
@@ -39,3 +39,37 @@ let person = {
 };
 
 person.name = "shakil";
+
+// explicit and union type
+let a: string;
+let b: number;
+
+a = "anis";
+b = 25;
+
+let names: string[] = [];
+names.push("anis", "shakil");
+
+let ages: number[] = [];
+ages.push(25, 30);
+
+let test: string | number;
+
+test = "abc";
+test = 25;
+// union
+let info: (string | number)[] = [];
+
+info.push("anis", 25);
+
+let data: {
+  name: string;
+  age: number;
+};
+
+data = {
+  name: "anis",
+  age: 25,
+};
+
+console.log(data);
