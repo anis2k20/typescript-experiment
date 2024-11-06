@@ -56,3 +56,15 @@ x = 6;
 x = "bangladesh";
 m.push(34);
 m.push("anis");
+// function type
+let myFunc;
+myFunc = () => {
+    console.log("Hello world!");
+};
+myFunc();
+const func = (a, b, c, d = 10) => {
+    console.log("hello " + a + " " + b + " " + c + " " + d);
+    return a + b;
+};
+// here c i s optional and d is default value
+console.log(func(20, 25));

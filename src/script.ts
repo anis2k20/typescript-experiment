@@ -83,3 +83,18 @@ x = "bangladesh";
 
 m.push(34);
 m.push("anis");
+
+// function type
+let myFunc: Function;
+
+myFunc = () => {
+  console.log("Hello world!");
+};
+myFunc();
+
+const func = (a: number, b: number, c?: string, d: number = 10): number => {
+  console.log("hello " + a + " " + b + " " + c + " " + d);
+  return a + b;
+};
+// here c i s optional and d is default value
+console.log(func(20, 25));
