@@ -49,3 +49,10 @@ data = {
     age: 25,
 };
 console.log(data);
+// dynamic type or any type---------------
+let x;
+let m = [];
+x = 6;
+x = "bangladesh";
+m.push(34);
+m.push("anis");
