@@ -68,3 +68,31 @@ const func = (a, b, c, d = 10) => {
 };
 // here c i s optional and d is default value
 console.log(func(20, 25));
+const userDetails = (id, user) => {
+    console.log(`user id is ${id} and user name is ${user.name} and user age is ${user.age}`);
+};
+const sayHello = (user) => {
+    console.log(`hello ${user.name} you are ${user.age} years old`);
+};
+userDetails(1, { name: "anis", age: 25 });
+// function signature----------
+let add;
+add = (a, b) => {
+    return a + b;
+};
+console.log(add(2, 3));
+let calculate;
+calculate = (a, b, c) => {
+    if (c === "add") {
+        return a + b;
+    }
+    else {
+        return a - b;
+    }
+};
+console.log(calculate(10, 3, "add"));
+let userInfo;
+userInfo = (id, user) => {
+    console.log(`user id is ${id} and user name is ${user.name} and user age is ${user.age}`);
+};
+userInfo(1, { name: "anis", age: 25 });

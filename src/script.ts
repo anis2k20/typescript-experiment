@@ -98,3 +98,60 @@ const func = (a: number, b: number, c?: string, d: number = 10): number => {
 };
 // here c i s optional and d is default value
 console.log(func(20, 25));
+
+// type aliases--------
+
+type stringOrNumber = string | number;
+type userType = {
+  name: string;
+  age: number;
+};
+
+const userDetails = (id: stringOrNumber, user: userType) => {
+  console.log(
+    `user id is ${id} and user name is ${user.name} and user age is ${user.age}`
+  );
+};
+
+const sayHello = (user: userType) => {
+  console.log(`hello ${user.name} you are ${user.age} years old`);
+};
+
+userDetails(1, { name: "anis", age: 25 });
+
+// function signature----------
+
+let add: (x: number, y: number) => number;
+
+add = (a: number, b: number) => {
+  return a + b;
+};
+console.log(add(2, 3));
+
+let calculate: (x: number, y: number, z: string) => number;
+
+calculate = (a: number, b: number, c: string) => {
+  if (c === "add") {
+    return a + b;
+  } else {
+    return a - b;
+  }
+};
+
+console.log(calculate(10, 3, "add"));
+
+let userInfo: (
+  id: stringOrNumber,
+  userDetails: {
+    name: string;
+    age: number;
+  }
+) => void;
+
+userInfo = (id: stringOrNumber, user: userType) => {
+  console.log(
+    `user id is ${id} and user name is ${user.name} and user age is ${user.age}`
+  );
+};
+
+userInfo(1, { name: "anis", age: 25 });
