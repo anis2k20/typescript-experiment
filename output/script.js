@@ -96,3 +96,29 @@ userInfo = (id, user) => {
     console.log(`user id is ${id} and user name is ${user.name} and user age is ${user.age}`);
 };
 userInfo(1, { name: "anis", age: 25 });
+class Person {
+    // private name: string;
+    // public age: number;
+    // readonly country: string;
+    // constructor(n: string, a: number, c: string) {
+    //   this.name = n;
+    //   this.age = a;
+    //   this.country = c;
+    // }
+    // another way
+    constructor(name, age, country) {
+        this.name = name;
+        this.age = age;
+        this.country = country;
+    }
+    play() {
+        console.log(`${this.name} from ${this.country} is playing!`);
+    }
+}
+const sakib = new Person("Shakib", 23, "Banglades");
+sakib.play();
+const players = [];
+players.push(sakib);
+console.log(players);
+console.log(sakib);
+console.log(sakib.country);
