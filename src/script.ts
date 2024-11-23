@@ -156,33 +156,13 @@ userInfo = (id: stringOrNumber, user: userType) => {
 
 userInfo(1, { name: "anis", age: 25 });
 
-class Person {
-  // private name: string;
-  // public age: number;
-  // readonly country: string;
-
-  // constructor(n: string, a: number, c: string) {
-  //   this.name = n;
-  //   this.age = a;
-  //   this.country = c;
-  // }
-  // another way
-  constructor(
-    private name: string,
-    public age: number,
-    readonly country: string
-  ) {}
-
-  play() {
-    console.log(`${this.name} from ${this.country} is playing!`);
-  }
-}
-
-const sakib = new Person("Shakib", 23, "Banglades");
+import { Player } from "./classes/player.js";
+// class-----------------------
+const sakib = new Player("Shakib", 23, "Banglades");
 
 sakib.play();
 
-const players: Person[] = [];
+const players: Player[] = [];
 
 players.push(sakib);
 console.log(players);
