@@ -157,6 +157,7 @@ userInfo = (id: stringOrNumber, user: userType) => {
 userInfo(1, { name: "anis", age: 25 });
 
 import { Player } from "./classes/player.js";
+import { isPlayer } from "./interfaces/isPlayer.js";
 // class-----------------------
 const sakib = new Player("Shakib", 23, "Banglades");
 
@@ -169,3 +170,28 @@ console.log(players);
 
 console.log(sakib);
 console.log(sakib.country);
+
+interface RectangleOptions {
+  width: number;
+  length: number;
+}
+
+function drawRectangle(options: RectangleOptions) {
+  let width = options.width;
+  let length = options.length;
+  console.log(width, length);
+}
+
+let options = {
+  width: 20,
+  length: 10,
+  height: 20,
+};
+
+drawRectangle(options);
+
+let mosfik: isPlayer;
+mosfik = new Player("Mosfik", 23, "Bangladesh");
+
+console.log(mosfik);
+console.log(mosfik.getProperty());

@@ -104,3 +104,18 @@ players.push(sakib);
 console.log(players);
 console.log(sakib);
 console.log(sakib.country);
+function drawRectangle(options) {
+    let width = options.width;
+    let length = options.length;
+    console.log(width, length);
+}
+let options = {
+    width: 20,
+    length: 10,
+    height: 20,
+};
+drawRectangle(options);
+let mosfik;
+mosfik = new Player("Mosfik", 23, "Bangladesh");
+console.log(mosfik);
+console.log(mosfik.getProperty());
