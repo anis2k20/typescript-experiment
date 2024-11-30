@@ -217,3 +217,15 @@ const response1: APIResponse<string> = {
 };
 
 console.log(response1);
+
+// tuples
+
+let p = [3, "hello", { p: 4 }];
+
+p[2] = 3;
+console.log(p);
+
+let q: [number, string, object] = [3, "hello", {}];
+q[2] = { p: 4 };
+q.push(989);
+console.log(q);
