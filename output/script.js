@@ -119,3 +119,17 @@ let mosfik;
 mosfik = new Player("Mosfik", 23, "Bangladesh");
 console.log(mosfik);
 console.log(mosfik.getProperty());
+// Enum
+var RType;
+(function (RType) {
+    RType[RType["success"] = 0] = "success";
+    RType[RType["failuer"] = 1] = "failuer";
+    RType[RType["unauthorized"] = 2] = "unauthorized";
+    RType[RType["forbidden"] = 3] = "forbidden";
+})(RType || (RType = {}));
+const response1 = {
+    status: 200,
+    type: RType.failuer,
+    data: "test",
+};
+console.log(response1);
